@@ -10,7 +10,7 @@ Journal App is a web-based platform designed to help users record their thoughts
 
 ## Demo
 
-[Video demonstration will be added soon]
+[https://www.youtube.com/watch?v=BhFxAlDCNMo]
 
 ---
 
