@@ -1,16 +1,24 @@
-# Journal App
+# InsightInk
 
 ---
 
 ## Description
 
-Journal App is a web-based platform designed to help users record their thoughts, experiences, and memories in a digital diary format. It offers an intuitive interface to jot down daily entries, reflect on past memories, and keep a personal space for oneself in the digital realm.
+My Journal App/InsightInk is a web-based journaling platform designed for individuals seeking a simple and intuitive space to document their thoughts, memories, and daily reflections. By leveraging the power of the Flask framework and SQLite3, I've created a robust platform that combines user-friendly features with a minimalistic design approach.
+
+The core functionalities of the application include user registration, authentication, and the ability to create, view, and manage personal journal entries. Each journal entry is securely associated with an individual user account, ensuring data privacy and a personalized user experience.
+
+The design of the application is intentionally minimalistic, reflecting my personal style preference. Opting for a stripped-back aesthetic allows users to focus entirely on the content, eliminating potential distractions.
+
+Internally, I prioritized using existing packages to optimize my development workflow. I employed several Flask extensions, including flask_sqlalchemy for database operations, werkzeug.security for password management, flask_wtf for form handling, and flask_login for user session management. One notable challenge I embraced during the development process was reverting to using plain CSS for styling. Having worked extensively with ReactJS and Tailwind recently, diving back into pure CSS was both a nostalgic journey and an opportunity to re-familiarize myself with the foundational aspects of web design.
+
+In today's fast-paced world, there's a growing need for digital spaces that promote introspection and mindfulness. My Journal App/InsightInk seeks to address this demand by offering a straightforward platform for users to chronicle their experiences, thoughts, and feelings. Whether used for daily reflections, capturing memories, or setting goals, this platform encourages users to engage in purposeful self-expression.
 
 ---
 
 ## Demo
 
-[https://www.youtube.com/watch?v=BhFxAlDCNMo]
+[https://www.youtube.com/watch?v=ZPwi7rZd284]
 
 ---
 
@@ -46,7 +54,7 @@ For developers who wish to run the project locally:
 
 1. **Clone the Repository**:
 
-   git clone [repository_url]
+   git clone [https://github.com/FredrikHaugen/journalApp.git]
 
 2. **Navigate to Project Directory**:
 
