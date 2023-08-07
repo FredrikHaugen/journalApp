@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Journal App</title>
+</head>
+<body style="height: 100vh;">
+
+<header class="main-header">
+    <h1><a style="text-decoration: none; color: lightgray;" href="{{ url_for('index') }}">Journal App</a></h1>
+    <nav>
+        <ul style="padding-top: 3px; font-weight: 200;" class="navbar">
+            <li><a href="{{ url_for('index') }}">home</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('user') }}">Welcome, {{ current_user.username }}</a></li>
+            <li><a href="{{ url_for('logout') }}">logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('register') }}">register</a></li>
+            <li><a href="{{ url_for('login') }}">login</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('new_entry') }}">new entry</a></li>
+            <li><a href="{{ url_for('view_all_entries') }}">view entries</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash-messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    
+    {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

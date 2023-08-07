@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="{{ request.path }}" method="post">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required value="{{ entry.title if entry else '' }}">
+    </div>
+    <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea name="content" id="content" rows="10" required>{{ entry.content if entry else '' }}</textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="{{ 'Update' if entry else 'Create' }}">
+    </div>
+</form>
+{% endblock %}

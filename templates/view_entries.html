@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% for entry in entries %}
+<a href="{{ url_for('view_entry', entry_id=entry.id) }}" class="no-link-style">
+    <div class="entry">
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.content }}</p>
+        <p><small>added on {{ entry.timestamp.strftime('%y-%m-%d %H:%M') }}</small></p>
+        <form class="entry" action="{{ url_for('delete_entry', entry_id=entry.id) }}" method="post">
+            <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this entry?');">
+        </form>
+    </div>
+</a>
+{% endfor %}
+{% endblock %}

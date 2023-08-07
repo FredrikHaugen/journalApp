@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="text-above-form">
+    <p>hey,</p>
+    <h2>{{ current_user.username }}</h2>
+</div>
+
+{% for entry in entries %}
+<div class="entry">
+    <h3>{{ entry.title }}</h3>
+    <p>{{ entry.content }}</p>
+    <p><small>Added on {{ entry.timestamp.strftime('%Y-%m-%d %H:%M') }}</small></p>
+</div>
+{% endfor %}
+
+{% endblock %}
